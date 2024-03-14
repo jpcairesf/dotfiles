@@ -1,0 +1,16 @@
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
+set relativenumber
+set number
+set showmode
+set showmodewidget
+set colorfulmodewidget
+set ideastatusicon=enabled
+set NERDTree
+set which-key
+set sneak
+set quickscope
