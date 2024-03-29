@@ -7,6 +7,10 @@ Sources that inspired me:
 - [Tmux has forever changed the way I write code. - Dreams of Code](https://www.youtube.com/watch?v=DzNmUNvnB04)
 - [35+ Eclipse Shortcuts and Productivity Tips for Java Developers!](https://www.turing.com/blog/eclipse-shortcuts-and-productivity-tips/)
 
+## Neovim
+
+You can find my [keybindings here](https://github.com/jpcairesf/dotfiles/blob/master/nvim/keybindings.md) (also inspired in ayamir/nvimdots wiki keybindings).
+
 ## Workspace
 
 Now take a look at that source of motivation for coding that I call my workspace.
