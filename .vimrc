@@ -20,14 +20,6 @@ syntax on
 
 set history=1000
 
-": to ;
-nnoremap ; :
-vnoremap ; :
-
-"not yanking deleted
-nmap p "0p
-nmap P "0P
-
 "vimdows arrows
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
