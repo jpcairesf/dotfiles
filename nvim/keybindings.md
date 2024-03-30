@@ -24,12 +24,12 @@ For `macOS` users, please refer to [this issue](https://github.com/ayamir/nvimdo
 |                 toggle floating terminal                  |   `N`   |         `<F2>`          |
 |                   **Buffer navigation**                   |         |                         |
 |               pick buffer `n`(`n`means No)                |   `N`   |         `<A-n>`         |
-|                       right buffer                        |   `N`   |         `<A-j>`         |
-|                        left buffer                        |   `N`   |         `<A-k>`         |
-|               move current buffer to right                |   `N`   |        `<A-S-j>`        |
-|                move current buffer to left                |   `N`   |        `<A-S-k>`        |
+|                       right buffer                        |   `N`   |         `<A-k>`         |
+|                        left buffer                        |   `N`   |         `<A-j>`         |
+|               move current buffer to right                |   `N`   |        `<A-S-k>`        |
+|                move current buffer to left                |   `N`   |        `<A-S-j>`        |
 |                   close current buffer                    |   `N`   |         `<A-q>`         |
-|                   close current window                    |   `N`   |        `<A-S-q>`        |
+|                   close current window                    |   `N`   |         `<A-x>`         |
 |                  split buffer vertically                  |   `N`   |        `<C-w>v`         |
 |                 split buffer horizontally                 |   `N`   |        `<C-w>s`         |
 |                       navigate down                       |   `N`   |         `<C-j>`         |
