@@ -12,20 +12,20 @@ editor["rainbowhxch/accelerated-jk.nvim"] = {
 	event = "VeryLazy",
 	config = require("editor.accelerated-jk"),
 }
-editor["olimorris/persisted.nvim"] = {
-	lazy = true,
-	cmd = {
-		"SessionToggle",
-		"SessionStart",
-		"SessionStop",
-		"SessionSave",
-		"SessionLoad",
-		"SessionLoadLast",
-		"SessionLoadFromFile",
-		"SessionDelete",
-	},
-	config = require("editor.persisted"),
-}
+-- editor["olimorris/persisted.nvim"] = {
+-- 	lazy = true,
+-- 	cmd = {
+-- 		"SessionToggle",
+-- 		"SessionStart",
+-- 		"SessionStop",
+-- 		"SessionSave",
+-- 		"SessionLoad",
+-- 		"SessionLoadLast",
+-- 		"SessionLoadFromFile",
+-- 		"SessionDelete",
+-- 	},
+-- 	config = require("editor.persisted"),
+-- }
 editor["m4xshen/autoclose.nvim"] = {
 	lazy = true,
 	event = "InsertEnter",
@@ -52,11 +52,11 @@ editor["ojroques/nvim-bufdel"] = {
 -- Considering its steep learning curve as well as backward compatibility issues...
 --  > We have no plan to remove the above plugins for the time being.
 -- But as usual, you can always tweak the plugin to your liking.
-editor["folke/flash.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.flash"),
-}
+-- editor["folke/flash.nvim"] = {
+-- 	lazy = true,
+-- 	event = { "CursorHold", "CursorHoldI" },
+-- 	config = require("editor.flash"),
+-- }
 editor["numToStr/Comment.nvim"] = {
 	lazy = true,
 	event = { "CursorHold", "CursorHoldI" },
@@ -71,17 +71,17 @@ editor["junegunn/vim-easy-align"] = {
 	lazy = true,
 	cmd = "EasyAlign",
 }
-editor["smoka7/hop.nvim"] = {
-	lazy = true,
-	version = "*",
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.hop"),
-}
-editor["RRethy/vim-illuminate"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.vim-illuminate"),
-}
+-- editor["smoka7/hop.nvim"] = {
+-- 	lazy = true,
+-- 	version = "*",
+-- 	event = { "CursorHold", "CursorHoldI" },
+-- 	config = require("editor.hop"),
+-- }
+-- editor["RRethy/vim-illuminate"] = {
+-- 	lazy = true,
+-- 	event = { "CursorHold", "CursorHoldI" },
+-- 	config = require("editor.vim-illuminate"),
+-- }
 editor["romainl/vim-cool"] = {
 	lazy = true,
 	event = { "CursorMoved", "InsertEnter" },
@@ -120,14 +120,14 @@ editor["nvim-treesitter/nvim-treesitter"] = {
 			"NvChad/nvim-colorizer.lua",
 			config = require("editor.colorizer"),
 		},
-		{
-			"hiphish/rainbow-delimiters.nvim",
-			config = require("editor.rainbow_delims"),
-		},
-		{
-			"nvim-treesitter/nvim-treesitter-context",
-			config = require("editor.ts-context"),
-		},
+		-- {
+		-- 	"hiphish/rainbow-delimiters.nvim",
+		-- 	config = require("editor.rainbow_delims"),
+		-- },
+		-- {
+		-- 	"nvim-treesitter/nvim-treesitter-context",
+		-- 	config = require("editor.ts-context"),
+		-- },
 		{
 			"JoosepAlviste/nvim-ts-context-commentstring",
 			config = require("editor.ts-context-commentstring"),
