@@ -1,16 +1,133 @@
-nnoremap <Tab> >>_
-nnoremap <S-Tab> <<_
-inoremap <S-Tab> <C-D>
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
 
-set relativenumber
-set number
-set showmode
-set showmodewidget
-set colorfulmodewidget
-set ideastatusicon=enabled
+" Source your .vimrc
+source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Searching improvements
+set incsearch
+
+" IdeaVim-Sneak
+Plug 'justinmk/vim-sneak'
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+" Map leader key
+let mapleader=" "
+
+""" The Escape button
+map <C-c> <Esc>
+
+" Go to first character better binding
+map # _
+
+" edit ideavim config
+nnoremap <leader>vv :e ~/.ideavimrc<CR>
+nnoremap <leader>vr :source ~/.ideavimrc<CR>
+
+" IDEA specific
+nmap <leader>? :action GotoAction<CR>
+
+" change font size
+nmap + :action EditorIncreaseFontSize<CR>
+nmap - :action EditorDecreaseFontSize<CR>
+
+" https://youtrack.jetbrains.com/issue/VIM-44
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+
+nmap <leader>e :action GotoFile<CR>
+nmap <leader>a :action FindInPath<CR>
+nmap gr :action ShowUsages<CR>
+nmap gi :action GotoImplementation<CR>
+nmap gs :action GotoSuperMethod<CR>
+nmap gu :action FindUsages<CR>
+
+""" NERDTree plugin  --------------------------------
+" Emulates NERDTree
+" Basic Commands:
+"   Ctrl-n  Open NERDTree (mapped bellow)
+"   q	    Close the NERDTree window
+"   o   	Open files, directories and bookmarks
+"   go   	Open selected file, but leave cursor in the NERDTree
+"   i   	Open selected file in a split window
+"   gi   	Same as i, but leave the cursor on the NERDTree
+"   s   	Open selected file in a new vsplit
+"   gs   	Same as s, but leave the cursor on the NERDTree
+"   <C-J>	Jump down to next sibling of the current directory
+"   <C-K>	Jump up to previous sibling of the current directory
+"   R	    Recursively refresh the current root
+"   m	    Display the NERDTree menu
+"   A	    Zoom (maximize/minimize) the NERDTree window	
+"   d	    Delete file or directory	
+"   n	    Create File	
+"   N	    Create Directory
+" See  https://github.com/JetBrains/ideavim/wiki/NERDTree-support for details
 set NERDTree
+map <c-n> :NERDTreeToggle<CR>
+
+" Windows and tabs
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-q> :action CloseContent<CR>
+
+nmap <C-tab> :action NextTab<CR>
+nmap <C-S-tab> :action PreviousTab<CR>
+
+" Refactor
+nmap <leader>ri :action Inline<CR>
+nmap <leader>rr :action RenameElement<CR>
+nmap <leader>rev :action IntroduceVariable<CR>
+vmap <leader>rev :action IntroduceVariable<CR>
+nmap <leader>rem :action ExtractMethod<CR>
+vmap <leader>rem :action ExtractMethod<CR>
+nmap <leader>rm :action Move<CR>
+nmap <leader>ro :action OptimizeImports<CR>
+nmap <leader>rG :action Generate<CR>
+nmap <leader>rp :action Refactorings.QuickListPopupAction<CR>
+
+""" Running and Debugging
+nnoremap <leader>dr :action ContextRun<CR>
+nnoremap <leader>dc :action RunClass<CR>
+nnoremap <leader>df :action ChooseRunConfiguration<CR>
+nnoremap <leader>dt :action ActivateRunToolWindow<CR>
+nnoremap <leader>du :action Rerun<CR>
+
+nnoremap <leader>df :action RerunFailedTests<CR>
+
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <leader>dd :action ContextDebug<CR>
+nnoremap <leader>dn :action ActivateDebugToolWindow<CR>
+
 set which-key
-set sneak
-set quickscope
+
+" disable the timeout option
+set notimeout
+
+set clipboard=unnamed
+set clipboard+=ideaput
+set ReplaceWithRegister
+let g:WhichKey_ShowVimActions = "true"
