@@ -14,6 +14,4 @@ You can find my [keybindings here](https://github.com/jpcairesf/dotfiles/blob/ma
 
 ## Workspace
 
-Now take a look at that source of motivation for coding that I call my workspace.
-
 ![Workflow](workflow.png)
